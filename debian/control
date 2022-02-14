@@ -1,0 +1,17 @@
+Source: popeye
+Section: admin
+Priority: optional
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+Build-Depends: debhelper-compat (= 13), dh-golang, golang-go (>= 1.17),
+Standards-Version: 4.6.0
+Homepage: https://popeyecli.io/
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/popeye
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/popeye.git
+XS-Go-Import-Path: github.com/derailed/popeye
+
+Package: popeye
+Architecture: amd64 arm64
+Depends: ${shlibs:Depends},
+	 ${misc:Depends},
+	 golang-go (>= 1.17),
+Description: A Kubernetes cluster resource sanitizer
