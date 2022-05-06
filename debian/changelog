@@ -1,3 +1,10 @@
+popeye (0.10.0-1kaisen) kaisen-packages; urgency=medium
+
+  * Import 0.10.0 version
+  * Update the quilt patch
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Fri, 06 May 2022 02:23:06 +0100
+
 popeye (0.9.8-1kaisen) kaisen-packages; urgency=medium
 
   * First packaging for Kaisen Linux
