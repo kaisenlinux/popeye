@@ -1,0 +1,21 @@
+Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+
+--- popeye-0.10.1.orig/Makefile
++++ popeye-0.10.1/Makefile
+@@ -1,6 +1,6 @@
+ NAME     := popeye
+ PACKAGE  := github.com/derailed/$(NAME)
+-VERSION  := v0.10.0
++VERSION  := v0.10.1
+ GIT      := $(shell git rev-parse --short HEAD)
+ DATE     := $(shell date +%FT%T%Z)
+ IMG_NAME := derailed/popeye
+@@ -17,7 +17,7 @@ cover:     ## Run test coverage suite
+ 
+ build:     ## Builds the CLI
+ 	@go build \
+-	-ldflags "-w -X ${PACKAGE}/cmd.version=${VERSION} -X ${PACKAGE}/cmd.commit=${GIT} -X ${PACKAGE}/cmd.date=${DATE}" \
++	-ldflags "-w -X ${PACKAGE}/cmd.version=${VERSION} -X ${PACKAGE}/cmd.date=${DATE}" \
+ 	-a -tags netgo -o execs/${NAME} *.go
+ 
+ img:  ## Build Docker Image

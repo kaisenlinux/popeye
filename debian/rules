@@ -13,3 +13,6 @@ override_dh_auto_test:
 
 override_dh_auto_install:
 	dh_auto_install -- --no-source
+	mkdir -p $(CURDIR)/debian/popeye/usr/share/bash-completion/completions $(CURDIR)/debian/popeye/usr/share/zsh/vendor-completions
+	$(CURDIR)/execs/popeye completion bash > $(CURDIR)/debian/popeye/usr/share/bash-completion/completions/popeye
+	$(CURDIR)/execs/popeye completion zsh > $(CURDIR)/debian/popeye/usr/share/zsh/vendor-completions/_popeye
