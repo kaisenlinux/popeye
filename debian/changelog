@@ -1,3 +1,10 @@
+popeye (0.10.1-2kaisen) kaisen-packages; urgency=medium
+
+  * Improvements of the packaging
+  * Rename the popeye-(0.10.0-1kaisen)-kaisen-packages;-urgency=medium in version
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 23 Jan 2023 01:49:14 +0100
+
 popeye (0.10.1-1kaisen) kaisen-packages; urgency=medium
 
   * Import 0.10.1 version

@@ -1,9 +1,12 @@
 #!/usr/bin/make -f
 
-export GOPATH=$(CURDIR)/obj-x86_64-linux-gnu
+export GOPATH=$(CURDIR)/_build
 
 %:
-	dh $@ --buildsystem=golang
+	dh $@ --buildsystem=golang --builddirectory=$(CURDIR)/_build
+
+override_dh_auto_clean:
+	rm -rf $(CURDIR)/obj-x86_64-linux-gnu $(CURDIR)/_build $(CURDIR)/execs/popeye
 
 override_dh_auto_build:
 	make build
@@ -13,6 +16,12 @@ override_dh_auto_test:
 
 override_dh_auto_install:
 	dh_auto_install -- --no-source
-	mkdir -p $(CURDIR)/debian/popeye/usr/share/bash-completion/completions $(CURDIR)/debian/popeye/usr/share/zsh/vendor-completions
 	$(CURDIR)/execs/popeye completion bash > $(CURDIR)/debian/popeye/usr/share/bash-completion/completions/popeye
 	$(CURDIR)/execs/popeye completion zsh > $(CURDIR)/debian/popeye/usr/share/zsh/vendor-completions/_popeye
+	install -p -m 0755 $(CURDIR)/execs/popeye $(CURDIR)/debian/popeye/usr/bin/popeye
+	install -p -m 0644 $(CURDIR)/debian/popeye.png $(CURDIR)/debian/popeye/usr/share/pixmaps/
+
+override_dh_installdocs:
+	dh_installdocs --all $(CURDIR)/LICENSE $(CURDIR)/README.md $(CURDIR)/change_logs/*
+
+override_dh_dwz:
