@@ -1,7 +1,7 @@
 Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
---- popeye-0.10.1.orig/cmd/version.go
-+++ popeye-0.10.1/cmd/version.go
+--- popeye-0.11.1.orig/cmd/version.go
++++ popeye-0.11.1/cmd/version.go
 @@ -23,7 +23,6 @@ func versionCmd() *cobra.Command {
  func printVersion() {
  	printLogo(report.ColorAqua, report.ColorLighSlate)

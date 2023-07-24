@@ -1,15 +1,7 @@
 Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
---- popeye-0.10.1.orig/Makefile
-+++ popeye-0.10.1/Makefile
-@@ -1,6 +1,6 @@
- NAME     := popeye
- PACKAGE  := github.com/derailed/$(NAME)
--VERSION  := v0.10.0
-+VERSION  := v0.10.1
- GIT      := $(shell git rev-parse --short HEAD)
- DATE     := $(shell date +%FT%T%Z)
- IMG_NAME := derailed/popeye
+--- popeye-0.11.1.orig/Makefile
++++ popeye-0.11.1/Makefile
 @@ -17,7 +17,7 @@ cover:     ## Run test coverage suite
  
  build:     ## Builds the CLI
