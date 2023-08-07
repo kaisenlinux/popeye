@@ -13,5 +13,4 @@ Package: popeye
 Architecture: amd64 arm64
 Depends: ${shlibs:Depends},
 	 ${misc:Depends},
-	 golang-go (>= 1.17),
 Description: A Kubernetes cluster resource sanitizer
