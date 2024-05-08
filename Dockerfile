@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Build...
-FROM golang:1.18.1-alpine3.14 AS build
+FROM golang:1.21-alpine3.19 AS build
 
 WORKDIR /popeye
 
@@ -9,11 +9,11 @@ COPY internal internal
 COPY cmd cmd
 COPY types types
 COPY pkg pkg
-RUN apk --no-cache add make git gcc libc-dev curl ca-certificates && make build
+RUN apk --no-cache add make git gcc libc-dev curl ca-certificates binutils-gold && make build
 
 # -----------------------------------------------------------------------------
 # Image...
-FROM alpine:3.14.0
+FROM alpine:3.19.0
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=build /popeye/execs/popeye /bin/popeye
