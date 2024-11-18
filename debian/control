@@ -2,7 +2,7 @@ Source: popeye
 Section: admin
 Priority: optional
 Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
-Build-Depends: debhelper-compat (= 13), dh-golang, golang-go (>= 1.17),
+Build-Depends: debhelper-compat (= 13), dh-golang, golang-go (>= 1.23.0),
 Standards-Version: 4.6.0
 Homepage: https://popeyecli.io/
 Vcs-Browser: https://gitlab.com/kaisenlinux/packages/popeye

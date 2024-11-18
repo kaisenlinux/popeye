@@ -1,3 +1,10 @@
+popeye (0.21.5-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the 0.21.5 release
+  * Bump the golang-go version required to build
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Tue, 19 Nov 2024 00:14:49 +0100
+
 popeye (0.21.3-1kaisen) kaisen-packages; urgency=medium
 
   * Import the 0.21.3 release
